@@ -1,17 +1,120 @@
+$grey:  #c5c5c5
+$l-grey: #dadada
+// -------------------------------
+.flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+.flex-row
+    display: flex
+    flex-direction: row
+.flex-col
+    display: flex
+    flex-direction: column
+.flex-bet
+    display: flex
+    justify-content: space-between
+.grid
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    gap: 1em 1.5em
+
+// -------------------
 body,*
     padding: 0
     margin: 0
     box-sizing: border-box
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 14px
 body
-    background-color: #dddddd
+    // background-color: #ecececb7
 .page
     max-width: 1400px
-    width: 100%
+    width: 95%
     margin: auto
     background-color: #fff
+    position: relative
     min-height: 100vh
-header
-    position: fixed
+// -----------------------------------------------------
+// -----------------------------------------------------
+.head
+    // position: fixed
+    max-width: 1400px
+    width: 100%
+    border-bottom: 1px solid $grey
+    padding: 1em 0
+    .block
+        height: 100px
+        background-color: $grey
+        padding: 1em
+        &+.block
+            margin-left: 2em
+        &-1
+            flex-grow: 1
+        &-2
+            flex-grow: 3
+        &-3
+            flex-grow: 5
+// -----------------------------------------------------
+// -----------------------------------------------------
+.content
+    position: relative
+    padding-top: 1em
+    padding-bottom: 1.5em
+    // border: solid 1px
+    min-height: 10em
+    flex: 1 0 auto
+    &-left
+        // height: 900px
+        width: 20%
+        position: relative
+        // border: solid
+        align-self: stretch
+    &-center
+        margin-left: 1.5em
+        border: solid 1px
+        width: 100%
+.dynamic-block
+    // border: solid
+    flex: 1 0
+    padding-bottom: 20px
+.inner-block
+    height: 350px
+    position: sticky
+    top: 0px
+    background-color: $grey
+    padding: 1em
+.bottom-block
+    // border: solid
+    padding: 1em
+    width: 100%
+    height: 200px
+    background-color: $grey
+// ===== CENTER =======
+.baner
+    background-color: $l-grey
+    padding: 1em
+    height: 250px
+.cards-wrap
+    padding: 1em 0
+    .card-item
+        padding: 1em
+        height: 250px
+        background-color: $l-grey
+// -----------------------------------------------------
+// -----------------------------------------------------
+.foot
+    padding: 1.5em 0
+    border-top: solid 1px $grey
+    width: 100%
+    &-blocks
+        padding: 1em
+        height: 170px
+        flex-grow: 1
+        background-color: $grey
+        &+.foot-blocks
+            margin-left: 2.5em
+
 // --------------------------------
 // @media ( max-width: 800px )
 
